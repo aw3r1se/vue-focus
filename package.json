@@ -1,0 +1,26 @@
+{
+  "name": "@aw3r1se/vue-dragresize",
+  "version": "1.0.4",
+  "description": "Drag and resize vue-component",
+  "module": "./src/index.js",
+  "files": ["src"],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aw3r1se/vue-dragresize.git"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "keywords": [
+    "drag",
+    "resize",
+    "svg",
+    "vue"
+  ],
+  "author": "aw3r1se",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/aw3r1se/vue-dragresize/issues"
+  }
+}
