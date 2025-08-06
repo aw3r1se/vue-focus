@@ -1,33 +1,30 @@
-# Drag and resize vue-component
+# Focus and unfocus vue-components
 
 ## 🔧 Installation
 
 ```sh
-npm i @aw3r1se/vue-dragresize
+npm i @aw3r1se/vue-focus
 ```
 
 ## ✏️ Usage
 
 ```vue
 <script>
-  import { useDragResize, Resizers } from '@aw3r1se/vue-dragresize';
+  import { ref, watch } from 'vue';
+  import { useFocus } from '@aw3r1se/vue-focus';
 
-  const {
-    geom,
-    style,
-    beginDrag,
-    beginResize,
-    toggleMaximize,
-  } = useDragResize({ minSize: 400 });
+  const el = ref();
+  const { isFocused } = useFocus(el);
+
+  watch(isFocused, val => {
+    val ? markAsRed()
+        : markAsGrey();
+  });
 </script>
 
 <template>
-  <div
-      :style="style"
-      @dblclick="toggleMaximize"
-      @mousedown="beginDrag"
-  >
-    <Resizers @resize-start="beginResize" />
+  <div ref="el">
+    ...
   </div>
 </template>
 ```
